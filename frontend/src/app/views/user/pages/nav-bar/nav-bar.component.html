@@ -1,0 +1,19 @@
+<nav class="flex justify-around w-auto pt-3 pb-3 ">
+    <div class="flex items-center">
+        <img class="w-40 h-20" src="../../../../assets/logo.png" alt="fsd">
+    </div>
+    <ul class="flex items-center text-2xl  text-black">
+        <li><a class="pr-2.5 pl-2.5" href="#">Home</a> </li>
+        <li><a class="pr-2.5 pl-2.5" routerLink="/service-list">Services</a></li>
+        <li><a class="pr-2.5 pl-2.5" routerLink="/workerList">Doctors</a></li>
+        <li><a class="pr-2.5 pl-2.5" href="#">Profile</a></li>
+    </ul>
+    <div class="pt-4">
+        <button *ngIf="isLoggedIn(); else loginSignup" class="px-4 py-1  text-lg mr-3 text-white  rounded bg-transparent shadow-lg backdrop-blur-[20px] hover:bg-black hover:text-white" (click)="logout()">Logout</button>
+
+        <ng-template #loginSignup>
+            <button class="px-4 py-1  text-lg mr-3 text-white  rounded bg-transparent shadow-lg backdrop-blur-[20px] hover:bg-black hover:text-white" routerLink="/auth/login">Login</button>
+            <button class="px-4 py-1  text-lg mr-3 text-white  rounded bg-transparent shadow-lg backdrop-blur-[20px] hover:bg-black hover:text-white" routerLink="/auth/signup">Signup</button>
+        </ng-template>
+    </div>
+</nav>

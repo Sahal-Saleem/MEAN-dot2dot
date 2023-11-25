@@ -1,0 +1,8 @@
+<app-nav-bar></app-nav-bar>
+<div class="flex items-center h-screen justify-center ">
+    <h1 class="text-[50px] font-bold leading-tight tracking-tight  text-gray-900  dark:text-black">
+      <ng-container *ngFor="let line of lines; let last = last">
+        {{ line }}<span *ngIf="!last"><br></span>
+      </ng-container>
+    </h1>
+  </div>
